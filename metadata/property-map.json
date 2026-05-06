@@ -1,0 +1,28 @@
+{
+  "repo": "vector-rel-budget-dock",
+  "language": "Solidity",
+  "category": "Reliability",
+  "goal": "Develop a Solidity command-oriented project for budget scenarios with bounded scenario files, conflict explanations, and single-node deterministic mode.",
+  "weights": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 2
+  },
+  "thresholds": {
+    "ship": 180,
+    "watch": 101
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
